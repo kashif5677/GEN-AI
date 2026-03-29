@@ -4,7 +4,6 @@ const authMiddleware = require("../middleware/auth.middleware")
 
 const authRouter = express.Router()
 
-
 /**
  * @route POST api/auth/register
  * @description register a user
