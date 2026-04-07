@@ -34,7 +34,10 @@ const interviewReportSchema = z.object({
 
 async function generateinterviewReport({ resume, seldescribe, jobdescribe }) {
 
-
+    const prompt = `Generate a resume based interview report for a job describe for a candidate.
+                     Resume:${resume}
+                    Self describe:${seldescribe}
+                     Job describe:${jobdescribe}`
 
     const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
